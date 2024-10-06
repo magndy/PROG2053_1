@@ -1,0 +1,243 @@
+/* FONT TYPES */
+@font-face {
+    font-family: 'Roboto';
+    src: url(Roboto/Roboto-Regular.ttf) format('truetype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(Roboto/Roboto-Bold.ttf) format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(Roboto/Roboto-Light.ttf) format('truetype');
+    font-weight: lighter;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(Roboto/Roboto-Italic.ttf) format('truetype');
+    font-style: italic;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+/* HEADER AND NAVIGATION */
+header{
+    text-align: center;
+    padding: 20px;
+    background-color: #202c34;
+    color: white;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.3);
+}
+header h1{
+    font-size: 3em;
+}
+nav ul{
+    list-style-type: none;
+    font-size: 1.5em;
+    padding: 0;
+}
+nav ul li{
+    display: inline;
+    padding: 10px
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+/* MAIN SECTION (1ST PAGE) */
+.mainsection{
+    background-color: #202c34;
+    color: white;
+    display: grid; /* Using grid here, and flex later because I wanted to try both */
+    grid-template-columns: 1fr 1fr; /* Even spacing */
+    padding: 75px;
+}
+.mainsection .text-content{
+    padding-left: 215px;
+    padding-right: 150px;
+}
+.mainsection .image-content{
+    padding-right: 150px;
+    padding-left: 0;
+    max-width: 100%;
+    height: auto;
+}
+.mainsection .signup-button{
+    background-color: #3782F5;
+    color: white;
+    padding: 7px 25px;
+    text-decoration: none;  /* removes underscore from link */
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 5px;     /* slightly rounding the box / border */
+}
+.mainsection h1{
+    font-size: 3em;
+    margin: 0;
+    font-weight: 700;
+}
+.mainsection p{
+    font-size: 1.7em;
+}
+
+/* POST SECTION (1ST PAGE) */
+.blogsection {
+    background-color: white;
+    padding: 0;
+    text-align: center;
+}
+.blogsection h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+.post {
+    display: flex; 
+    padding: 50px 50px;
+    max-width: 1000px; /* max width of the post section to match the assignment */
+    margin: 0 auto; /* puts the container center with 0 margin top/bottom and auto setting the sides */
+    gap: 50px; /* gap between images and text */
+}
+.post-text {
+    flex: 55%; /* adjusted % to make text overlap with picture on post below slightly */
+    text-align: justify;
+    font-size: 1.7em;
+}
+.post-image {
+    flex: 45%;
+}
+.post-image img {
+    max-width: 100%; /* allows picture to scale if needed */
+    height: auto; /* maintain the aspect ratio */
+    border:#3782F5 solid 5px; /* adds a rounded blue border to pic */
+    border-radius: 20px;
+}
+/* odd posts: Text on the left, image on the right */
+.post:nth-child(odd) {
+    flex-direction: row;
+}
+/* even posts: Image on the left, text on the right */
+.post:nth-child(even) {
+    flex-direction: row-reverse;
+}
+/* Quote section */
+.quote{
+    background-color: #E4E5EB;
+    padding: 80px 400px;
+    padding-bottom: 50px;
+    font-size: 2.5em;
+    border: #ababad solid 2px;
+    font-style: italic;
+}
+span.signatur {
+    display: block; /* make the span a block element so we can align right */
+    text-align: right;
+    font-weight: bold;
+    font-size: 0.8em; /* Optional: reduce the font size for the signature */
+}
+/* Call to action section */
+.cta {
+    background-color: white;
+    padding: 100px 250px;
+    text-align: left;
+    font-size: 1.7em;
+}
+.box {
+    display: grid;
+    grid-template-columns: 70% 30%; /* 70 % for the text, 30 for the button */
+    background-color: #3782F5;
+    padding: 40px 150px;
+    color: white;
+    border:#3c637c solid 2px;
+    border-radius: 20px; 
+    align-items: center; 
+}
+.box p{
+    font-size: 1.1em;
+    padding: 0;
+}
+.boxhead{   /* Headline in box */
+    font-weight: bold;
+}
+.signup-button-2 {
+    background-color: #3782F5;  /* button color */
+    color: white;               /* text color */
+    border: solid white 3px;    /* border around button */
+    padding: 7px 25px;          
+    text-decoration: none;        /* removed underline on link */
+    font-weight: bold;          
+    font-size: 1.2rem;
+    border-radius: 5px;           /* rounding of edges */
+    justify-self: right;          /* keeps button on the right side within its grid space */
+}
+
+/* DYNAMIC POSTS, 2ND PAGE */
+.post-container {
+    /* 1 by 3 grid display */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;  /* between boxes / posts */
+    padding: 20px; /* for the whole container */
+}
+.post-container article {
+    padding: 10px 50px;     /* within each post */
+    background-color: #f5f3f3;
+    border: 1px solid #ccc;
+    border-radius: 20px;    /* rounded corners */
+}
+.post-container h1 {
+    font-size: 1.7em;
+}
+.post-container p {
+    font-size: 1.2em;
+}
+
+/* WEATHER SECTION (3RD PAGE) */
+.weathersection {
+    text-align: center;
+    padding: 30px 300px;
+}
+.weathersection h2 {
+    font-size: 3em;
+}
+.weatherdisplay{
+    display: grid;  /* Showing 5 locations for each row */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px 0px;
+}
+.weather-container {
+    border: 1px solid #808080;
+    padding: 10px;
+    margin: 10px 5px;
+    text-align: center;
+    background-color: #e6e6e62f;
+    border-radius: 20px;    /* round edges */
+}
+.weather-container p {  /* weather data */
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.weather-container h3 {  /* location name */
+    font-size: 1.8em;
+    min-height: 2.5em;   /* To ensure long loc names wrapping does not mess up boxes alignment */
+}
+.weather-container #weathericon {
+    font-size: 3em;     /* size of weather icons */
+}
+
+/* Footer */
+footer{
+    background-color: #202c34;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+

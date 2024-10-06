@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Weather Updates</title>
+    <link rel="stylesheet" href="css/oblig1.css">
+    <script src="js/oblig1.js" defer></script> 
+</head>
+
+<body>
+    <header>
+        <h1>Explore Nature</h1>
+        <nav>
+            <ul>
+                <li><a href="oblig1main.html">Home Page</a></li>
+                <li><a href="oblig1posts.html">All Posts</a></li>
+                <li><a href="oblig1weather.html">Live Weather</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="weathersection">
+            <h2>Real-Time Weather Updates</h2>
+            <div class="weatherdisplay">
+            <!-- All of these elements could have been dynamically made in JS, but are hard coded since they
+            will not change and are static for better performance. JS code that would do this is provided in the script
+            but commented out in the js file -->
+                
+                <!-- One weather-container for each location -->
+                <div class="weather-container" id="location-1">
+                    <h3>Tokyo, Japan</h3>
+                    <p id="weathericon"><span id="icon-1"></span></p> <!-- Empty placeholder for weather icon -->
+                    <p>Temperature: <span id="temp-1"></span>°C</p>
+                    <p>Wind Speed: <span id="wind-1"></span> km/h</p>
+                    <p>Updated at: <span id="time-1"></span></p>
+                </div>
+
+                <div class="weather-container" id="location-2">
+                    <h3>London, UK</h3>
+                    <p id="weathericon"><span id="icon-2"></span></p>
+                    <p>Temperature: <span id="temp-2"></span>°C</p>
+                    <p>Wind Speed: <span id="wind-2"></span> km/h</p>
+                    <p>Updated at: <span id="time-2"></span></p>
+                </div>
+
+                <div class="weather-container" id="location-3">
+                    <h3>New York, USA</h3>
+                    <p id="weathericon"><span id="icon-3"></span></p> 
+                    <p>Temperature: <span id="temp-3"></span>°C</p>
+                    <p>Wind Speed: <span id="wind-3"></span> km/h</p>
+                    <p>Updated at: <span id="time-3"></span></p>
+                </div>
+
+                <div class="weather-container" id="location-4">
+                    <h3>Sydney, Australia</h3>
+                    <p id="weathericon"><span id="icon-4"></span></p> 
+                    <p>Temperature: <span id="temp-4"></span>°C</p>
+                    <p>Wind Speed: <span id="wind-4"></span> km/h</p>
+                    <p>Updated at: <span id="time-4"></span></p>
+                </div>
+
+                <div class="weather-container" id="location-5">
+                    <h3>Berlin, Germany</h3>
+                    <p id="weathericon"><span id="icon-5"></span></p> 
+                    <p>Temperature: <span id="temp-5"></span>°C</p>
+                    <p>Wind Speed: <span id="wind-5"></span> km/h</p>
+                    <p>Updated at: <span id="time-5"></span></p>
+                </div>
+
+                <div class="weather-container" id="location-6">
+                    <h3>Oslo, Norway</h3>
+                    <p id="weathericon"><span id="icon-6"></span></p> 
+                    <p>Temperature: <span id="temp-6"></span>°C</p>
+                    <p>Wind Speed: <span id="wind-6"></span> km/h</p>
+                    <p>Updated at: <span id="time-6"></span></p>
+                </div>
+
+                <div class="weather-container" id="location-7">
+                    <h3>Rome, Italy</h3>
+                    <p id="weathericon"><span id="icon-7"></span></p> 
+                    <p>Temperature: <span id="temp-7"></span>°C</p>
+                    <p>Wind Speed: <span id="wind-7"></span> km/h</p>
+                    <p>Updated at: <span id="time-7"></span></p>
+                </div>
+
+                <div class="weather-container" id="location-8">
+                    <h3>Dublin, Ireland</h3>
+                    <p id="weathericon"><span id="icon-8"></span></p> 
+                    <p>Temperature: <span id="temp-8"></span>°C</p>
+                    <p>Wind Speed: <span id="wind-8"></span> km/h</p>
+                    <p>Updated at: <span id="time-8"></span></p>
+                </div>
+
+                <div class="weather-container" id="location-9">
+                    <h3>Rio de Janeiro, Brazil</h3>
+                    <p id="weathericon"><span id="icon-9"></span></p> 
+                    <p>Temperature: <span id="temp-9"></span>°C</p>
+                    <p>Wind Speed: <span id="wind-9"></span> km/h</p>
+                    <p>Updated at: <span id="time-9"></span></p>
+                </div>
+
+                <div class="weather-container" id="location-10">
+                    <h3>Paris, France</h3>
+                    <p id="weathericon"><span id="icon-10"></span></p> 
+                    <p>Temperature: <span id="temp-10"></span>°C</p>
+                    <p>Wind Speed: <span id="wind-10"></span> km/h</p>
+                    <p>Updated at: <span id="time-10"></span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <footer>
+        <p>&copy; 2024 MyWebsite. All rights reserved.</p>
+    </footer>
+</body>
+</html>
